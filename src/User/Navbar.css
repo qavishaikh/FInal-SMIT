@@ -1,0 +1,67 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .navbar-toggle-button {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    color: white !important;
+  }
+  
+  .navbar-links-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-link {
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 0;
+    margin-right: 30px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar-toggle-button {
+      display: block;
+      color: white;
+      margin-right: 30px;
+    }
+  
+    .navbar-links-container {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #343a40;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      padding: 10px 20px;
+      color: #fff;
+    }
+  
+    .navbar-links-container.open {
+      display: flex;
+    }
+  }
+  
