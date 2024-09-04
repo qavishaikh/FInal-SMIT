@@ -1,28 +1,43 @@
 // src/AdminDashboard.js
 import React from 'react';
+import Sidebar from './Sidebar';
+import { signOut } from 'firebase/auth';
+import { auth } from '../Auth/firebase';
+import { useNavigate } from 'react-router-dom';
 
 const AdminDashboard = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate('/login'); // Redirect to login page after logout
+    } catch (error) {
+      alert(`Logout failed: ${error.message}`);
+    }
+  };
+
   return (
     <div style={styles.container}>
+    <Sidebar onLogout={handleLogout} />
+    <div style={styles.content}>
       <h1 style={styles.heading}>Admin Dashboard</h1>
       <p style={styles.text}>Welcome, Admin! Here you can manage users, view analytics, and configure system settings.</p>
-      <div style={styles.menu}>
-        <button style={styles.button}>Manage Users</button>
-        <button style={styles.button}>View Analytics</button>
-        <button style={styles.button}>System Settings</button>
-      </div>
     </div>
+  </div>
   );
 };
 
 const styles = {
   container: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
     height: '100vh',
     backgroundColor: '#f8f9fa',
+    paddingLeft: '250px', // Adjust padding based on sidebar width
+  },
+  content: {
+    flex: 1,
+    padding: '40px',
   },
   heading: {
     fontSize: '36px',
@@ -30,21 +45,13 @@ const styles = {
   },
   text: {
     fontSize: '18px',
-    marginBottom: '30px',
   },
-  menu: {
-    display: 'flex',
-    gap: '10px',
-  },
-  button: {
-    padding: '10px 20px',
-    fontSize: '16px',
-    cursor: 'pointer',
-    backgroundColor: '#007bff',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '4px',
+  '@media (max-width: 768px)': {
+    container: {
+      paddingLeft: '0',
+    },
   },
 };
+
 
 export default AdminDashboard;
