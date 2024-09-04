@@ -1,0 +1,51 @@
+/* src/HomePage.css */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+  text-align: center;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.home-container p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-link {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+.home-link1 {
+  text-decoration: none;
+  background-color: #28a745;
+  padding: 15px 25px;
+  color:#fff;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #0056b3;
+}

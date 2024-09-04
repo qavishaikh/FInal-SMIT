@@ -1,0 +1,51 @@
+/* src/User/UserNavbar.css */
+.user-navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.user-navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.user-navbar li {
+  display: inline;
+}
+
+.user-navbar a, .user-navbar button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.user-navbar a:hover, .user-navbar button:hover {
+  background-color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .user-navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-navbar li {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-navbar a, .user-navbar button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}

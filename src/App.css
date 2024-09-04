@@ -1,0 +1,19 @@
+/* App.css */
+.App {
+    display: flex;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+    background-color: #ecf0f1;
+    height: 100vh;
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      margin-left: 0;
+    }
+  }
+  
