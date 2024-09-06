@@ -4,6 +4,7 @@ import Sidebar from './Sidebar';
 import { signOut } from 'firebase/auth';
 import { auth } from '../Auth/firebase';
 import { useNavigate } from 'react-router-dom';
+import ImageUpload from '../Auth/ImageUpload';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const AdminDashboard = () => {
     <div style={styles.content}>
       <h1 style={styles.heading}>Admin Dashboard</h1>
       <p style={styles.text}>Welcome, Admin! Here you can manage users, view analytics, and configure system settings.</p>
+      <ImageUpload />
     </div>
   </div>
   );
