@@ -20,7 +20,7 @@ const Signup = () => {
         email: email,
         username: username,
         password: password,
-        userType: 'admin'
+        userType: 'user'
       });
 
       navigate('/login');

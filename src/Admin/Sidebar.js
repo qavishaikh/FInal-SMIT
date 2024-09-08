@@ -17,9 +17,11 @@ const Sidebar = ({ onLogout }) => {
     <h2 style={styles.logo}>Admin Panel</h2>
     <ul style={styles.menu}>
       <li style={styles.menuItem} onClick={() => navigate('/admindashboard')}>Dashboard</li>
-      <li style={styles.menuItem} onClick={() => navigate('/manage-users')}>Manage Users</li>
-      <li style={styles.menuItem} onClick={() => navigate('/analytics')}>Analytics</li>
-      <li style={styles.menuItem} onClick={() => navigate('/settings')}>Settings</li>
+      <li style={styles.menuItem} onClick={() => navigate('/jobs')}>Add Jobs</li>
+      <li style={styles.menuItem} onClick={() => navigate('/appliedjobs')}>View Applied Jobs</li>
+      <li style={styles.menuItem} onClick={() => navigate('/jobslist')}>Jobs List</li>
+      <li style={styles.menuItem} onClick={() => navigate('/events')}>Add Events</li>
+      <li style={styles.menuItem} onClick={() => navigate('/viewparticipants')}>Events Participants</li>
       <li style={styles.menuItem} onClick={onLogout}>Logout</li>
     </ul>
   </div>
